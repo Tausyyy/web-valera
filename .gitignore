@@ -1,0 +1,14 @@
+valera.db*
+bin/
+obj/
+valera-frontend/node_modules/
+valera-frontend/dist/
+ValeraApi/bin/
+ValeraApi/obj/
+ValeraApi.Tests/bin/
+ValeraApi.Tests/obj/
+.env
+.env.*
+!.env.example
+appsettings.*.json
+!appsettings.json

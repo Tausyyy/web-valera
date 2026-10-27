@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom'
 import type { Props } from '../types/valera'
 export function ValeraCard({ valera, onDelete }: Props) {
 	return (
 		<div className="bg-zinc-900 p-5 m-3 rounded-2xl border border-zinc-700 hover:border-zinc-500 duration-300">
-			<h2 className="text-2xl font-bold text-pink-400">Имя: {valera.name}</h2>
+			<Link to={`/valera/${valera.id}`} className="text-2xl font-bold text-pink-400">
+				Имя: {valera.name}
+			</Link>
+
 			<p>
 				ID: <span className="text-green-500">{valera.id}</span>
 			</p>

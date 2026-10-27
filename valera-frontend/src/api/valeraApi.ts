@@ -14,6 +14,15 @@ export async function getValeras(): Promise<Valera[]> {
 	return data
 }
 
+export async function getValeraById(id: number): Promise<Valera> {
+	const response = await fetch(`${API_URL}/${id}`)
+
+	if (!response.ok) {
+		throw new Error('Не удалось загрузить Валеру')
+	}
+	return response.json()
+}
+
 export async function createValera(name: string): Promise<Valera> {
 	const response = await fetch(API_URL, {
 		method: 'POST',
